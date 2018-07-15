@@ -2,23 +2,25 @@ import React from 'react';
 import Card from './Card';
 
 
-const CardList = ({ characters }) => {
+const CardList = ({ movies }) => {
+
     return(
         <div>
+
         {
-            characters.map((character, i) => {
+            movies.map((movie, i) => {
                 return (<Card 
                     key={i} 
-                    name={characters[i].name} 
-                    gender={characters[i].gender} 
-                    hair_color={characters[i].hair_color}
-                    skin_color={characters[i].skin_color} 
-                    height={characters[i].height} 
-                    mass={characters[i].mass} 
+                    title={movies[i].title} 
+                    opening_crawl={movies[i].opening_crawl}
+                    episode_id={movies[i].episode_id} 
+                    release_date={movies[i].release_date}
                 />
                 );
     })}
     </div>
     );
 }
+
+
 export default CardList;
